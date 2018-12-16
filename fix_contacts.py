@@ -73,16 +73,16 @@ class Contacts():
             for row in content:
                   input_file.write(row)
 
-    def type_data(input_char):
+    def type_data(input_text):
         distribution = {'special': 0, 'number': 0, 'chars': 0}
-        for char in input_char:
+        for char in input_text:
             if distribution.isdigit():
                 distribution['number'] += 1
             elif distribution.isalpha():
                 distribution['chars'] += 1
             else:
                 distribution['special'] += 1
-        percentage_distribution = {key: distribution[key]/len(input_char)
+        percentage_distribution = {key: distribution[key]/len(input_text)
                                    for key in distribution}
 
     def try_fill(row):
